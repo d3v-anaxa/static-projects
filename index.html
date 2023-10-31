@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family:"Sans";
+            font-size: 22px;
+        }
+        .element {
+            padding: 25px;
+            min-height: 50px;
+            min-width: 145px;
+            border: 1px white solid;
+            margin: 5px;
+        }
+        #root {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline ;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+    </style>
+    <center>
+        <h1>ASCII-CODE-SITE</h1>
+        <div id="root"></div>
+    </center>
+    <script>
+        const root = document.querySelector("#root")
+        for(let i = 0; i < 256; i++){
+            let character = String.fromCodePoint(i);
+            if (!/[\w\d]/.test(character)) continue
+            const elem = document.createElement("div")
+            elem.className = "element"
+            elem.textContent = `[${i}] ${character}`
+            root.appendChild(elem);
+        }
+    </script>
+</body>
+</html>
