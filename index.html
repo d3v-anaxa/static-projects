@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang=en>
+<head>
+	<meta charset=UTF-8>
+	<link rel="stylesheet" href="style.css" media=all>
+	<script src="script.js" defer></script>
+	<title>number-system-conversion</title>
+</head>
+<body>
+	<div class="container">
+		<h1>number-system-conversion</h1>
+		<br>
+		<input type="text" id="input">
+		<br>
+		<fieldset>
+			<label for="binary">Binary</label>
+			<input type="radio" name="radix" id="binary" value="2">
+			
+			<label for="octal">Octal</label>
+			<input type="radio" name="radix" id="octal" value="8">
+			
+			<label for="decimal">Decimal</label>
+			<input type="radio" name="radix" id="decimal" value="10">
+			
+			<label for="hexadecimal">Hexadecimal</label>
+			<input type="radio" name="radix" id="hexadecimal" value="16">
+		</fieldset>
+		<br>
+		<input id="submit" type="submit" value="SUBMIT" onclick="getInput()">
+		<br>
+		<p id="error"> </p>
+	</div>
+	<div class="output">
+		<h1>OUTPUT</h1>
+		<br>
+		<table>
+			<thead>
+				<td>RADIX</td>
+				<td>NUMBER</td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>BINARY</td>
+					<td id="out2"> </td>
+				</tr>
+				<tr>
+					<td>OCTAL</td>
+					<td id="out8"> </td>
+				</tr>
+				<tr>
+					<td>DECIMAL</td>
+					<td id="out10"> </td>
+				</tr>
+				<tr>
+					<td>HEXADECIMAL</td>
+					<td id="out16"> </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
